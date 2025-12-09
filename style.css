@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  background: #e8ecf5;
+  font-family: Arial, sans-serif;
+}
+
+.app-shell {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.phone-frame {
+  width: 380px;
+  height: 720px;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 22px;
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  background: #60a5fa;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.app-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.app-subtitle {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 3px;
+}
+
+.app-main {
+  padding: 18px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+.screen-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.highlight-card {
+  background: #e7edff;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #b9c2d3;
+  margin-top: 8px;
+}
+
+.btn {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn.primary { background: #1e40af; }
+.btn.secondary { background: #64748b; }
+
+.week-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.week-cell {
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.inperson { background: #2563eb; }
+.online { background: #7c3aed; }
+
+.hint-text {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  font-size: 11px;
+  margin-right: 5px;
+  margin-top: 6px;
+}
+
+.tech { background: #dbeafe; }
+.quiet { background: #fce7f3; }
+.social { background: #fef9c3; }
+.flex { background: #e0f2fe; }
+.chill { background: #dcfce7; }
+
+.bottom-nav {
+  display: flex;
+  background: #f1f5f9;
+  padding: 10px 0;
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-btn.active {
+  background: #dbe0ec;
+  font-weight: bold;
+}

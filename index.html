@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUD FlexClass</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <div class="phone-frame">
+
+      <header class="app-header">
+        <div class="app-title">
+          <span class="logo-dot"></span>
+          <span>AUD FlexClass</span>
+        </div>
+        <div class="app-subtitle">Hybrid learning made simple</div>
+      </header>
+
+      <main class="app-main">
+
+        <!-- TODAY SCREEN -->
+        <section id="screen-today" class="screen active">
+          <h2 class="screen-title">Today’s Schedule</h2>
+
+          <div id="today-list" class="card-list"></div>
+
+          <div class="card highlight-card">
+            <h3>Need a reminder?</h3>
+            <p>Click the button below to send today's schedule to your email.</p>
+
+            <input 
+              id="email-input"
+              type="email"
+              class="input"
+              placeholder="Enter your AUD email"
+            />
+
+            <button class="btn primary" onclick="sendScheduleEmail()">
+              Send Schedule to Email
+            </button>
+
+            <p id="email-status" class="status-text"></p>
+          </div>
+        </section>
+
+        <!-- WEEKLY SCREEN -->
+        <section id="screen-week" class="screen">
+          <h2 class="screen-title">Weekly Hybrid View</h2>
+          <div id="week-grid" class="week-grid"></div>
+          <p class="hint-text">Blue = In-person · Purple = Online</p>
+        </section>
+
+        <!-- SPACES SCREEN -->
+        <section id="screen-spaces" class="screen">
+          <h2 class="screen-title">Hybrid Study Spaces</h2>
+
+          <div class="card">
+            <h3>Library – Quiet Rooms</h3>
+            <p>Best for serious online classes and exams. Strong Wi-Fi and silence.</p>
+            <span class="tag tech">Tech-ready</span>
+            <span class="tag quiet">Quiet</span>
+          </div>
+
+          <div class="card">
+            <h3>Student Center – Open Seating</h3>
+            <p>Good for light lectures, studying, and group tasks.</p>
+            <span class="tag social">Social</span>
+            <span class="tag flex">Flexible</span>
+          </div>
+
+          <div class="card">
+            <h3>Outdoor Shaded Areas</h3>
+            <p>Nice for recorded lectures or short breaks between classes.</p>
+            <span class="tag chill">Relaxed</span>
+          </div>
+
+          <div class="card">
+            <h3>Housing Study Lounges</h3>
+            <p>Perfect for evening online classes without commuting back to campus.</p>
+            <span class="tag tech">Tech-ready</span>
+            <span class="tag quiet">Quiet</span>
+          </div>
+        </section>
+
+        <!-- NOTIFICATIONS -->
+        <section id="screen-notifications" class="screen">
+          <h2 class="screen-title">Notifications</h2>
+          <div class="card-list" id="notification-list"></div>
+          <button class="btn secondary" onclick="generateTestNotification()">
+            Generate Test Notification
+          </button>
+        </section>
+
+      </main>
+
+      <!-- NAVBAR -->
+      <nav class="bottom-nav">
+        <button class="nav-btn active" onclick="switchScreen('today', this)">Today</button>
+        <button class="nav-btn" onclick="switchScreen('week', this)">Week</button>
+        <button class="nav-btn" onclick="switchScreen('spaces', this)">Spaces</button>
+        <button class="nav-btn" onclick="switchScreen('notifications', this)">Alerts</button>
+      </nav>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
